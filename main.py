@@ -7,12 +7,12 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
 
-MOVIE_API_KEY = os.environ['MOVIE_KEY']
+MOVIE_API_KEY = os.environ['THE_MOVIE_API_KEY']
 MOVIE_SEARCH_ENDPOINT = 'https://api.themoviedb.org/3/search/movie'
 
 app = Flask(__name__)
 app.app_context().push()
-app.config['SECRET_KEY'] = os.environ['MOVIE_API_KEY']
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 Bootstrap(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'

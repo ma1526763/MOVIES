@@ -12,7 +12,7 @@ MOVIE_SEARCH_ENDPOINT = 'https://api.themoviedb.org/3/search/movie'
 
 app = Flask(__name__)
 app.app_context().push()
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ['MOVIE_API_KEY']
 Bootstrap(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'

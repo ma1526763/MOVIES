@@ -1,12 +1,13 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
+import os
 import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
 
-MOVIE_API_KEY = '2150ecda85562f48496f7eafcb6d58de'
+MOVIE_API_KEY = os.environ['MOVIE_KEY']
 MOVIE_SEARCH_ENDPOINT = 'https://api.themoviedb.org/3/search/movie'
 
 app = Flask(__name__)

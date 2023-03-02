@@ -7,7 +7,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
 
-MOVIE_API_KEY = os.environ['MOVIE_KEY']
+MOVIE_API_KEY = os.environ['THE_MOVIE_API_KEY']
 MOVIE_SEARCH_ENDPOINT = 'https://api.themoviedb.org/3/search/movie'
 
 app = Flask(__name__)
